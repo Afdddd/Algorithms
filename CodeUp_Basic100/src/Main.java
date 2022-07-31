@@ -1,10 +1,13 @@
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int i = scanner.nextInt();
-        System.out.format("%d %d %d", i, i, i);
+        StringTokenizer str = new StringTokenizer(scanner.nextLine(),":");
+        String hour = str.nextToken();
+        String min = str.nextToken();
+        System.out.println(hour + ":" + min);
 
     }
 }
