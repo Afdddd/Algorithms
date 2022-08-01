@@ -4,15 +4,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        char[] chars = new char[50];
         String line = scanner.nextLine();
-
-
-        for(int i=0;i<line.length();i++){
-            chars[i] = line.charAt(i);
-            System.out.println("\'"+chars[i]+"\'");
-
+        char[] data = new char[line.length()];
+        for (int i = 0; i < line.length(); i++) {
+            data[i] = line.charAt(i);
         }
+        System.out.println("["+data[0]+"0000]");
+        System.out.println("["+data[1]+"000]");
+        System.out.println("["+data[2]+"00]");
+        System.out.println("["+data[3]+"0]");
+        System.out.println("["+data[4]+"]");
 
     }
 }
