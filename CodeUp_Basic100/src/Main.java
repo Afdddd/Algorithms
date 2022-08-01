@@ -1,12 +1,18 @@
 import java.util.Scanner;
-import java.util.StringTokenizer;
 
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        StringTokenizer st = new StringTokenizer(scanner.nextLine(), ".");
-        System.out.println(st.nextToken()+"\n"+st.nextToken());
+        char[] chars = new char[50];
+        String line = scanner.nextLine();
+
+
+        for(int i=0;i<line.length();i++){
+            chars[i] = line.charAt(i);
+            System.out.println("\'"+chars[i]+"\'");
+
+        }
 
     }
 }
