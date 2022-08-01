@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String num = scanner.nextLine();
-        String[] strings = num.split("-");
-        System.out.println(strings[0]+strings[1]);
+        String data[] = new String[51];
+        data[0]=scanner.nextLine();
+        System.out.println(data[0]);
     }
 }
