@@ -2,8 +2,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double v = sc.nextDouble();
-        System.out.format("%.11f",v);
+        Long l = sc.nextLong();
+        System.out.println(l);
 
     }
 }
