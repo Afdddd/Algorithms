@@ -7,7 +7,9 @@ public class Main {
         for (int i = 0; i < nums.length; i++) {
             int num = Integer.parseInt(nums[i]);
             if (num % 2 == 0) {
-                System.out.println(nums[i]);
+                System.out.println("even");
+            }else {
+                System.out.println("odd");
             }
         }
     }
