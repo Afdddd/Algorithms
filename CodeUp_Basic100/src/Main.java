@@ -4,15 +4,14 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
-        if (num > 0) {
-            System.out.println("plus");
-        }else {
-            System.out.println("minus");
-        }
-        if (num % 2 == 0) {
-            System.out.println("even");
-        }else {
-            System.out.println("odd");
+        if(90<=num&&num<=100){
+            System.out.println("A");
+        } else if(70<=num&&num<=89){
+            System.out.println("B");
+        } else if(40<=num&&num<=69){
+            System.out.println("C");
+        } else if(0<=num&&num<=39){
+            System.out.println("D");
         }
     }
 }
