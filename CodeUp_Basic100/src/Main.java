@@ -3,22 +3,28 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String grade = sc.next();
-        switch (grade) {
-            case "A":
-                System.out.println("best!!!");
+        int month = sc.nextInt();
+        switch (month) {
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("spring");
                 break;
-            case "B":
-                System.out.println("good!!");
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("summer");
                 break;
-            case "C":
-                System.out.println("run!");
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("fall");
                 break;
-            case "D":
-                System.out.println("slowly~");
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("winter");
                 break;
-            default:
-                System.out.println("what?");
         }
     }
 }
