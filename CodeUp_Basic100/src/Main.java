@@ -3,13 +3,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int i = 0;
+        int sum =0 ;
         while (true) {
-            char c = sc.next().charAt(0);
-            if (c == 'q') {
-                System.out.println('q');
+            i++;
+            sum+=i;
+            if (sum >= num) {
+                System.out.println(i);
                 break;
             }
-            System.out.println(c);
         }
     }
 }
