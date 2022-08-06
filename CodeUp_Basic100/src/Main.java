@@ -2,29 +2,16 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int month = sc.nextInt();
-        switch (month) {
-            case 3:
-            case 4:
-            case 5:
-                System.out.println("spring");
+    Scanner sc = new Scanner(System.in);
+        String[] nums = sc.nextLine().split(" ");
+        for (int i = 0; i < nums.length; i++) {
+            int numA = Integer.parseInt(nums[i]);
+            if (numA == 0) {
                 break;
-            case 6:
-            case 7:
-            case 8:
-                System.out.println("summer");
-                break;
-            case 9:
-            case 10:
-            case 11:
-                System.out.println("fall");
-                break;
-            case 12:
-            case 1:
-            case 2:
-                System.out.println("winter");
-                break;
+            }else {
+                System.out.println(numA);
+            }
         }
     }
+
 }
