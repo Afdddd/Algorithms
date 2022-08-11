@@ -7,17 +7,13 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         int num = Integer.parseInt(br.readLine());
-        int sum = 0;
-        int i = 0;
-        while (true) {
-            if (sum >= num) {
-                break;
+        for (int i = 1; i <= num; i++) {
+            if (i % 3 == 0) {
+                continue;
             }
-            i++;
-            sum+=i;
+            String s = String.valueOf(i);
+            bw.write(s+" ");
         }
-        String s = String.valueOf(sum);
-        bw.write(s);
         bw.flush();
         bw.close();
     }
