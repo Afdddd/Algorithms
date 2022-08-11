@@ -7,11 +7,12 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         String[] nums = br.readLine().split(" ");
         long a = Long.parseLong(nums[0]);
-        long r = Long.parseLong(nums[1]);
-        long n = Long.parseLong(nums[2]);
+        long m = Long.parseLong(nums[1]);
+        long d = Long.parseLong(nums[2]);
+        long n = Long.parseLong(nums[3]);
 
         for (int i = 1; i < n; i++) {
-            a*=r;
+            a = a*m+d;
         }
         bw.write(String.valueOf(a));
         bw.flush();
