@@ -6,15 +6,14 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         String[] nums = br.readLine().split(" ");
-        long a = Long.parseLong(nums[0]);
-        long m = Long.parseLong(nums[1]);
-        long d = Long.parseLong(nums[2]);
-        long n = Long.parseLong(nums[3]);
-
-        for (int i = 1; i < n; i++) {
-            a = a*m+d;
+        int a = Integer.parseInt(nums[0]);
+        int b = Integer.parseInt(nums[1]);
+        int c = Integer.parseInt(nums[2]);
+        int day = 1;
+        while (day % a != 0 || day % b != 0 || day % c != 0) {
+            day++;
         }
-        bw.write(String.valueOf(a));
+        bw.write(day+"");
         bw.flush();
         bw.close();
     }
