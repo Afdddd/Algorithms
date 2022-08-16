@@ -1,20 +1,18 @@
-import java.io.*;
+import java.util.Scanner;
 
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        String[] nums = br.readLine().split(" ");
-        int a = Integer.parseInt(nums[0]);
-        int b = Integer.parseInt(nums[1]);
-        int c = Integer.parseInt(nums[2]);
-        int day = 1;
-        while (day % a != 0 || day % b != 0 || day % c != 0) {
-            day++;
+    public static void main(String[] args)  {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int[] arr = new int[23];
+        for (int i = 0; i < n; i++) {
+            int a = sc.nextInt();
+            arr[a-1]+=1;
         }
-        bw.write(day+"");
-        bw.flush();
-        bw.close();
+        for (int i = 0; i < 23; i++) {
+            System.out.print(arr[i]+" ");
+        }
     }
 }
