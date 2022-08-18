@@ -6,12 +6,12 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        int[] arr = new int[23];
-        for (int i = 0; i < n; i++) {
-            int a = sc.nextInt();
-            arr[a-1]+=1;
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i ++) {
+            arr[i] = sc.nextInt();
         }
-        for (int i = 0; i < 23; i++) {
+        for (int i = n - 1; i >= 0; i--) {
             System.out.print(arr[i]+" ");
         }
     }
