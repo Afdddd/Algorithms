@@ -7,12 +7,15 @@ public class Main {
         int n = sc.nextInt();
 
         int[] arr = new int[n];
+        int x= 23;
 
         for (int i = 0; i < n; i ++) {
-            arr[i] = sc.nextInt();
+            int a = sc.nextInt();
+            arr[i] = a;
+            if (x > a) {
+                x=a;
+            }
         }
-        for (int i = n - 1; i >= 0; i--) {
-            System.out.print(arr[i]+" ");
-        }
+        System.out.println(x);
     }
 }
