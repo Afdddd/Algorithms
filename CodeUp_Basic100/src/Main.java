@@ -5,17 +5,21 @@ public class Main {
     public static void main(String[] args)  {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+        int[][] arr = new int[19][19];
 
-        int[] arr = new int[n];
-        int x= 23;
+        for (int i=0; i<n; i++){
+            int x = sc.nextInt();
+            int y = sc.nextInt();
 
-        for (int i = 0; i < n; i ++) {
-            int a = sc.nextInt();
-            arr[i] = a;
-            if (x > a) {
-                x=a;
-            }
+            arr[x-1][y-1] = 1;
+
         }
-        System.out.println(x);
+
+        for (int i = 0; i < 19; i++) {
+            for (int j = 0; j < 19; j++) {
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
     }
 }
