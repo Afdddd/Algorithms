@@ -1,50 +1,33 @@
 import java.util.Scanner;
 
-
 public class Main {
-    public static void main(String[] args)  {
-
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[][] arr = new int[20][20];
 
-        for (int i = 1; i < 20; i++) {
-            for (int j = 1; j < 20; j++) {
-                arr[i][j]=sc.nextInt();
-            }
-        }
+        int h = sc.nextInt();
+        int w = sc.nextInt();
+        int[][] board = new int[h][w];
 
         int n = sc.nextInt();
-
-        for (int i = 0; i < n; i++) {
+        for (int i=1; i<=n; i++) {
+            int l = sc.nextInt();
+            int d = sc.nextInt();
             int x = sc.nextInt();
             int y = sc.nextInt();
 
-            for (int j = 1; j < 20; j++) {
-                if (arr[x][j] == 1) {
-                    arr[x][j] = 0;
-                } else {
-                    arr[x][j] = 1;
-                }
-            }
-
-
-            for (int l = 1; l < 20; l++) {
-                if (arr[l][y] == 1) {
-                    arr[l][y] = 0;
-                } else {
-                    arr[l][y] = 1;
-                }
+            for (int j=0; j<l; j++) {
+                if (d == 0) // 가로
+                    board[x-1][y-1+j] = 1;
+                else
+                    board[x-1+j][y-1] = 1;
             }
         }
 
-            for (int i = 1; i < 20; i++) {
-                for (int j = 1; j < 20; j++) {
-                    System.out.print(arr[i][j]+" ");
-                }
-                System.out.println();
+        for (int i=0; i<h; i++) {
+            for (int j=0; j<w; j++) {
+                System.out.print(board[i][j] + " ");
             }
-
+            System.out.println();
+        }
     }
-
-
 }
